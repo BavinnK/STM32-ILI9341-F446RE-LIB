@@ -22,6 +22,15 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+<<<<<<< HEAD
+=======
+Core/MyDRIVERS/ADC \
+Core/MyDRIVERS/CLOCK \
+Core/MyDRIVERS/DMA \
+Core/MyDRIVERS/GPIO \
+Core/MyDRIVERS/SPI \
+Core/MyDRIVERS/USART \
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
 Core/Src/ILI9341 \
 Core/Src \
 Core/Startup \

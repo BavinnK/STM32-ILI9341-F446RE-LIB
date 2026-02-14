@@ -86,6 +86,10 @@
 #include "main.h"
 #include "stm32f4xx_hal.h"
 
+<<<<<<< HEAD
+=======
+#include "MySPI.h"
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
 
 #define ILI9341_SCREEN_HEIGHT 240 
 #define ILI9341_SCREEN_WIDTH 	320
@@ -94,6 +98,7 @@
 /* USER DEFINITIONS */
 //#define ILI9341_SPI_PORT hspi1
 
+<<<<<<< HEAD
 #define LCD_CS_PORT GPIOC
 #define LCD_CS_PIN  GPIO_PIN_7
 
@@ -102,6 +107,16 @@
 
 #define LCD_RST_PORT GPIOA
 #define LCD_RST_PIN  GPIO_PIN_9
+=======
+#define LCD_CS_PORT GPIOB
+#define LCD_CS_PIN  GPIO_PIN_1
+
+#define LCD_DC_PORT GPIOB
+#define LCD_DC_PIN  GPIO_PIN_15
+
+#define LCD_RST_PORT GPIOB
+#define LCD_RST_PIN  GPIO_PIN_14
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
 //-------------------------------------------------------------------//
 
 #define BURST_MAX_SIZE 	500

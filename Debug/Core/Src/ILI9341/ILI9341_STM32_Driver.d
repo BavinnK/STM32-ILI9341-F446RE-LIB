@@ -27,7 +27,14 @@ Core/Src/ILI9341/ILI9341_STM32_Driver.o: \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
+<<<<<<< HEAD
  C:/Users/pc/Desktop/STM_PROJECTS/TEST/Core/Inc/ILI9341/ILI9341_STM32_Driver.h
+=======
+ C:/Users/pc/Desktop/STM_PROJECTS/test_tft/Core/Inc/ILI9341/ILI9341_STM32_Driver.h \
+ C:/Users/pc/Desktop/STM_PROJECTS/test_tft/Core/MyDRIVERS/SPI/MySPI.h \
+ ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h \
+ C:/Users/pc/Desktop/STM_PROJECTS/test_tft/Core/MyDRIVERS/GPIO/gpiox.h
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -56,4 +63,11 @@ Core/Src/ILI9341/ILI9341_STM32_Driver.o: \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
+<<<<<<< HEAD
 C:/Users/pc/Desktop/STM_PROJECTS/TEST/Core/Inc/ILI9341/ILI9341_STM32_Driver.h:
+=======
+C:/Users/pc/Desktop/STM_PROJECTS/test_tft/Core/Inc/ILI9341/ILI9341_STM32_Driver.h:
+C:/Users/pc/Desktop/STM_PROJECTS/test_tft/Core/MyDRIVERS/SPI/MySPI.h:
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h:
+C:/Users/pc/Desktop/STM_PROJECTS/test_tft/Core/MyDRIVERS/GPIO/gpiox.h:
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)

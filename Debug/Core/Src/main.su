@@ -1,6 +1,14 @@
 ../Core/Src/main.c:70:5:main	16	static
+<<<<<<< HEAD
 ../Core/Src/main.c:135:6:SystemClock_Config	88	static
 ../Core/Src/main.c:183:13:MX_SPI1_Init	8	static
 ../Core/Src/main.c:221:13:MX_USART2_UART_Init	8	static
 ../Core/Src/main.c:254:13:MX_GPIO_Init	48	static
 ../Core/Src/main.c:316:6:Error_Handler	4	static,ignoring_inline_asm
+=======
+../Core/Src/main.c:120:6:SystemClock_Config	88	static
+../Core/Src/main.c:175:13:MX_SPI1_Init	8	static
+../Core/Src/main.c:213:13:MX_USART2_UART_Init	8	static
+../Core/Src/main.c:246:13:MX_GPIO_Init	48	static
+../Core/Src/main.c:288:6:Error_Handler	4	static,ignoring_inline_asm
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)

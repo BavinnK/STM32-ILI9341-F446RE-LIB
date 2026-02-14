@@ -6,7 +6,11 @@
   ******************************************************************************
   * @attention
   *
+<<<<<<< HEAD
   * Copyright (c) 2025 STMicroelectronics.
+=======
+  * Copyright (c) 2026 STMicroelectronics.
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file

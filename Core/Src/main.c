@@ -6,7 +6,11 @@
   ******************************************************************************
   * @attention
   *
+<<<<<<< HEAD
   * Copyright (c) 2025 STMicroelectronics.
+=======
+  * Copyright (c) 2026 STMicroelectronics.
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -21,8 +25,13 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+<<<<<<< HEAD
 #include "ILI9341_STM32_Driver.h"
 #include "ILI9341_GFX.h"
+=======
+#include "ILI9341_GFX.h"
+#include "ILI9341_STM32_Driver.h"
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -95,6 +104,7 @@ int main(void)
   MX_USART2_UART_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
+<<<<<<< HEAD
   // --- SCREEN TEST CODE START ---
 
    // 1. Initialize the display
@@ -115,6 +125,13 @@ int main(void)
     ILI9341_Draw_Filled_Rectangle_Coord(20, 100, 220, 150, PINK); // Corrected function name
     ILI9341_Draw_Hollow_Circle(250, 125, 30, GREEN);              // Corrected function name
     ILI9341_Draw_Filled_Circle(80, 180, 40, WHITE);             // This function name was correct
+=======
+  ILI9341_Init();
+  HAL_Delay(100);
+  ILI9341_Draw_Colour(RED);
+  ILI9341_Fill_Screen(RED);
+  ILI9341_Draw_Text("bitch", 10,70, BLACK, 2, BLUE);
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -140,7 +157,11 @@ void SystemClock_Config(void)
   /** Configure the main internal regulator output voltage
   */
   __HAL_RCC_PWR_CLK_ENABLE();
+<<<<<<< HEAD
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE3);
+=======
+  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
 
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
@@ -151,7 +172,11 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLM = 8;
+<<<<<<< HEAD
   RCC_OscInitStruct.PLL.PLLN = 90;
+=======
+  RCC_OscInitStruct.PLL.PLLN = 180;
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 2;
   RCC_OscInitStruct.PLL.PLLR = 2;
@@ -160,16 +185,33 @@ void SystemClock_Config(void)
     Error_Handler();
   }
 
+<<<<<<< HEAD
+=======
+  /** Activate the Over-Drive mode
+  */
+  if (HAL_PWREx_EnableOverDrive() != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
   /** Initializes the CPU, AHB and APB buses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+<<<<<<< HEAD
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+=======
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
+
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
   {
     Error_Handler();
   }
@@ -198,7 +240,11 @@ static void MX_SPI1_Init(void)
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
+<<<<<<< HEAD
   hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_4;
+=======
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -265,6 +311,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
+<<<<<<< HEAD
   HAL_GPIO_WritePin(LCD_CS_GPIO_Port, LCD_CS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
@@ -272,6 +319,9 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LCD_DC_GPIO_Port, LCD_DC_Pin, GPIO_PIN_RESET);
+=======
+  HAL_GPIO_WritePin(GPIOB, LCD_CS_PIN_Pin|LCD_RST_PIN_Pin|LCD_DC_PIN_Pin, GPIO_PIN_RESET);
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
 
   /*Configure GPIO pin : B1_Pin */
   GPIO_InitStruct.Pin = B1_Pin;
@@ -279,6 +329,7 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
 
+<<<<<<< HEAD
   /*Configure GPIO pin : LCD_CS_Pin */
   GPIO_InitStruct.Pin = LCD_CS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -299,6 +350,14 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LCD_DC_GPIO_Port, &GPIO_InitStruct);
+=======
+  /*Configure GPIO pins : LCD_CS_PIN_Pin LCD_RST_PIN_Pin LCD_DC_PIN_Pin */
+  GPIO_InitStruct.Pin = LCD_CS_PIN_Pin|LCD_RST_PIN_Pin|LCD_DC_PIN_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 

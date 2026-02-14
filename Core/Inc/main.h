@@ -7,7 +7,11 @@
   ******************************************************************************
   * @attention
   *
+<<<<<<< HEAD
   * Copyright (c) 2025 STMicroelectronics.
+=======
+  * Copyright (c) 2026 STMicroelectronics.
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -41,7 +45,11 @@ extern "C" {
 
 /* Exported constants --------------------------------------------------------*/
 /* USER CODE BEGIN EC */
+<<<<<<< HEAD
 
+=======
+extern SPI_HandleTypeDef hspi1;
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
 /* USER CODE END EC */
 
 /* Exported macro ------------------------------------------------------------*/
@@ -53,7 +61,11 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
+<<<<<<< HEAD
 extern SPI_HandleTypeDef hspi1;
+=======
+
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
@@ -63,18 +75,30 @@ extern SPI_HandleTypeDef hspi1;
 #define USART_TX_GPIO_Port GPIOA
 #define USART_RX_Pin GPIO_PIN_3
 #define USART_RX_GPIO_Port GPIOA
+<<<<<<< HEAD
 #define LCD_CS_Pin GPIO_PIN_7
 #define LCD_CS_GPIO_Port GPIOC
 #define LCD_RST_Pin GPIO_PIN_9
 #define LCD_RST_GPIO_Port GPIOA
+=======
+#define LCD_CS_PIN_Pin GPIO_PIN_1
+#define LCD_CS_PIN_GPIO_Port GPIOB
+#define LCD_RST_PIN_Pin GPIO_PIN_14
+#define LCD_RST_PIN_GPIO_Port GPIOB
+#define LCD_DC_PIN_Pin GPIO_PIN_15
+#define LCD_DC_PIN_GPIO_Port GPIOB
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
 #define TMS_Pin GPIO_PIN_13
 #define TMS_GPIO_Port GPIOA
 #define TCK_Pin GPIO_PIN_14
 #define TCK_GPIO_Port GPIOA
 #define SWO_Pin GPIO_PIN_3
 #define SWO_GPIO_Port GPIOB
+<<<<<<< HEAD
 #define LCD_DC_Pin GPIO_PIN_6
 #define LCD_DC_GPIO_Port GPIOB
+=======
+>>>>>>> d357943 (removed HAL completly from the ili lib exepct the hal delays)
 
 /* USER CODE BEGIN Private defines */
 
